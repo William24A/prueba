@@ -883,11 +883,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\teste\\teste.csproj",
+      "projectUniqueName": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\teste\\teste.csproj",
+      "projectPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\teste.csproj",
       "packagesPath": "C:\\Users\\wil37\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\teste\\obj\\",
+      "outputPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wil37\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PpFfQ86XEvOiKlaZAf/aejXO5gibyIDks8dGZS/j2LIAt5W6N6KFuC3NucGX7G2gkABxcXS5g7HhJMF4a0F8ug==",
+  "dgSpecHash": "tUviDjtsNLOkpS3GSsLxXnlGG2a5B9Ht3F2dPg5UycMCG+RiUcyeqPHQtGk0nmo07qILclwd3x68/JEf2aSoSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\teste\\teste.csproj",
+  "projectFilePath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\teste.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wil37\\.nuget\\packages\\microsoft.codecoverage\\17.11.0\\microsoft.codecoverage.17.11.0.nupkg.sha512",
     "C:\\Users\\wil37\\.nuget\\packages\\microsoft.net.test.sdk\\17.11.0\\microsoft.net.test.sdk.17.11.0.nupkg.sha512",
