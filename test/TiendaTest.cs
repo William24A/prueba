@@ -1,16 +1,23 @@
 using Xunit;
-using Tienda;
+using TiendaNew;
 
-public class ProgramTest
+public class TiendaTest
 {
     [Fact]
-    public void Suma()
+    public void AgregarProductoTest()
     {
-        Pruebas prueb = new Pruebas("William");
+        Tienda tiendaPrueba = new Tienda();
+        string nombre = "Res";
+        float precio = 1223;
+        string categoria = "carnes";
 
-        var result = prueb.Suma(2,3);
+        tiendaPrueba.AgregarProducto(nombre, precio,categoria);
 
-        Assert.Equal(4,result);
+        var producto = tiendaPrueba.BuscarProductos(nombre);
+        Assert.NotNull(producto);
+        Assert.Equal(nombre,producto.Nombre);
+        Assert.Equal(precio,producto.Precio);
+        Assert.Equal(categoria,producto.Categoria);
     } 
 
 }
