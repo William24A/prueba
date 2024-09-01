@@ -12,10 +12,9 @@ namespace TiendaNew
             ProductosListados = new List<Producto>();
         }
 
-        public void AgregarProducto(string nombre, float precio, string categoria)
+        public void AgregarProducto(Producto producto)
         {
-            Producto prod = new Producto(nombre, precio, categoria);
-            ProductosListados.Add(prod);
+            ProductosListados.Add(producto);
         }
 
         public Producto BuscarProductos(string nombre)

@@ -5,7 +5,7 @@ namespace Productos
         public string Nombre{get; set;}
         public float Precio{get; set;}
         public string Categoria{get;set;}
-        public Producto()
+        public Producto() 
         {
             Nombre = "";
             Precio = 0;

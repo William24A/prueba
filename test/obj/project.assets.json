@@ -878,19 +878,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wil37\\.nuget\\packages\\": {}
+    "C:\\Users\\Alvaro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\teste.csproj",
+      "projectUniqueName": "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\test\\teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\teste.csproj",
-      "packagesPath": "C:\\Users\\wil37\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\test\\obj\\",
+      "projectPath": "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\test\\teste.csproj",
+      "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\wil37\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -902,8 +902,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\MiProyecto\\MiProyecto.csproj": {
-              "projectPath": "C:\\Users\\wil37\\OneDrive\\Escritorio\\prueba\\MiProyecto\\MiProyecto.csproj"
+            "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\MiProyecto\\MiProyecto.csproj": {
+              "projectPath": "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\MiProyecto\\MiProyecto.csproj"
             }
           }
         }

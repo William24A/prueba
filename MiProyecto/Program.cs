@@ -11,7 +11,7 @@ namespace MisPruebas
             Console.WriteLine("Hola");
             Tienda tiendaRosa = new Tienda();
 
-            tiendaRosa.AgregarProducto("Res", 2400, "Carne");
+            //tiendaRosa.AgregarProducto("Res", 2400, "Carne");
             Producto produ = tiendaRosa.BuscarProductos("Res");
             Console.WriteLine(produ.NombrarProducto());
         }
