@@ -24,5 +24,15 @@ namespace Productos
             return "Nombre: "+ Nombre + " Precio: "+ Precio + " Categoria: "+ Categoria;
         }
 
+        public void Actualizar_Precio(float precio)
+        {
+            if(precio < 0)
+            {
+                throw new ArgumentException("El precio nuevo es negativo");
+            }
+
+            this.Precio = precio;
+        }
+
     }
 }

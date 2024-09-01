@@ -19,7 +19,12 @@ namespace TiendaNew
 
         public Producto BuscarProductos(string nombre)
         {
-            return ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+            var product = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+            if (product == null)
+            {
+                throw new ArgumentException("No se encontro el producto");
+            }
+            return product;
     
         }
 
@@ -32,6 +37,8 @@ namespace TiendaNew
                 // Eliminar el producto de la lista
                 ProductosListados.Remove(productoAEliminar);
                 return true; // Indica que la eliminación fue exitosa
+            }else{
+                throw new ArgumentException("No se puede eliminar productos que no exiten");
             }
 
             return false; // Indica que el producto no fue encontrado

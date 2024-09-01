@@ -45,7 +45,7 @@ public class TiendaTest
         Assert.Equal(precio,producto.Precio);
         Assert.Equal(categoria,producto.Categoria);
     }
-
+/*
     [Fact]
     public void BuscarProductosTestFalse()
     {
@@ -58,7 +58,7 @@ public class TiendaTest
 
         // Then
         Assert.Null(producto);
-    }
+    }*/
 
     [Fact]
     public void EliminarProductoTest()
@@ -77,4 +77,38 @@ public class TiendaTest
         Assert.True(producto);
     } 
 
+    [Fact]
+    public void BuscarProductosExcepcionesTest()
+    {
+        // Given
+        Tienda tiendaPrueba = new Tienda();
+        string nombre = "Res";
+        // When
+        // Then
+        var exception = Assert.Throws<ArgumentException>(() => tiendaPrueba.BuscarProductos(nombre));
+    }
+
+    [Fact]
+    public void EliminarProductoExcepcionesTest()
+    {
+        // Given
+        Tienda tiendaPrueba = new Tienda();
+        string nombre = "Res";
+        // When
+        // Then
+        var exception = Assert.Throws<ArgumentException>(() => tiendaPrueba.EliminarProducto(nombre));
+    }
+
+    [Fact]
+    public void Actualizar_PrecioExcepcionesTest()
+    {
+        // Given
+        Producto productoPrueba = new Producto();
+        float num = -1234;
+        // When
+        // Then
+        var exception = Assert.Throws<ArgumentException>(() => productoPrueba.Actualizar_Precio(num));
+    }
+
+    
 }
