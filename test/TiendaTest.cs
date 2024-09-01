@@ -21,13 +21,13 @@ public class TiendaTest
         // Assert
         var producto = tiendaPrueba.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
         Assert.NotNull(producto);
-        Assert.Equal(nombre,producto.Nombre);
+        Assert.Equal(nombre,producto.Nombre); 
         Assert.Equal(precio,producto.Precio);
         Assert.Equal(categoria,producto.Categoria);
     }
 
     [Fact]
-    public void BuscarProductosTest()
+    public void BuscarProductosTestTrue()
     {
         // Given
         Tienda tiendaPrueba = new Tienda();
@@ -44,6 +44,20 @@ public class TiendaTest
         Assert.Equal(nombre,producto.Nombre);
         Assert.Equal(precio,producto.Precio);
         Assert.Equal(categoria,producto.Categoria);
+    }
+
+    [Fact]
+    public void BuscarProductosTestFalse()
+    {
+        // Given
+        Tienda tiendaPrueba = new Tienda();
+        string nombre = "Res";
+
+        // When
+        var producto = tiendaPrueba.BuscarProductos(nombre);
+
+        // Then
+        Assert.Null(producto);
     }
 
     [Fact]
