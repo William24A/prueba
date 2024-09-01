@@ -1,0 +1,15 @@
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.csproj.AssemblyReference.cache
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.AssemblyInfoInputs.cache
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.AssemblyInfo.cs
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.csproj.CoreCompileInputs.cache
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.exe
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.deps.json
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.runtimeconfig.json
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.dll
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.pdb
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.dll
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\refint\MiProyecto.dll
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.pdb
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.genruntimeconfig.cache
+C:\Users\wil37\OneDrive\Escritorio\prueba\MiProyecto\obj\Debug\net7.0\ref\MiProyecto.dll
