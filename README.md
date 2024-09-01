@@ -1,10 +1,9 @@
 # Resolución tp n°1
-# Miembros: Albarrin, WIlliam - Diaz, Alvaro
+# Miembros: Albarracin, WIlliam - Diaz, Alvaro
 
 
 ---
 - [Instalacion](#instalación)
-- [Proyecto](#Proyecto)
 
 
 ## Instalación
