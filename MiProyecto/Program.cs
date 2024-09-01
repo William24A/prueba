@@ -1,5 +1,6 @@
 ﻿using System;
-using MisPruebas;
+using TiendaNew;
+using Productos;
 
 namespace MisPruebas
 {
@@ -7,14 +8,12 @@ namespace MisPruebas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese un nombre: ");
-            string nombre = Console.ReadLine();
-            Pruebas objeto1 = new Pruebas(nombre);
-            Console.WriteLine("Mi nombre es: "+ objeto1.RetornaNombre());
+            Console.WriteLine("Hola");
+            Tienda tiendaRosa = new Tienda();
 
-            objeto1.CambiarNombre("marta");
-            Console.WriteLine("Mi nombre es: "+ objeto1.RetornaNombre());
-   
+            tiendaRosa.AgregarProducto("Res", 2400, "Carne");
+            Producto produ = tiendaRosa.BuscarProductos("Res");
+            Console.WriteLine(produ.NombrarProducto());
         }
     }
 }

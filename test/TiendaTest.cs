@@ -1,5 +1,5 @@
 using Xunit;
-using MisPruebas;
+using Tienda;
 
 public class ProgramTest
 {
