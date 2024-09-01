@@ -10,7 +10,7 @@ public class ProgramTest
 
         var result = prueb.Suma(2,3);
 
-        Assert.Equal(5,result);
+        Assert.Equal(4,result);
     } 
 
 }
