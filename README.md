@@ -1,5 +1,5 @@
 # Resolución tp n°1
-# Miembros: Albarracin, WIlliam - Diaz, Alvaro
+# Miembros: Albarracin, William - Diaz, Alvaro
 
 
 ---
