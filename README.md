@@ -23,3 +23,11 @@ Abrí tu entorno de desarrollo preferido y seleccioná "Open Project" (Abrir Pro
 Una vez realizado esto abre la terminal y ejecuta los test con el comadno:
 
 dotnet test
+
+
+--- 
+
+1
+En la practica realizada solo se puede reconocer prubas unitarias, porque se realizaron sobre cada
+uno de los metodos de la clase. 
+
