@@ -1,6 +1,14 @@
 namespace Productos 
 {
-    public class Producto
+    public interface IProducto
+    {
+        string Nombre { get;}
+        float Precio { get;}
+        string Categoria { get;}
+        public string NombrarProducto();
+        public void Actualizar_Precio(float precio);
+    }
+    public class Producto: IProducto
     {
         public string Nombre{get; set;}
         public float Precio{get; set;}

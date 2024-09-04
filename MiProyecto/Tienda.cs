@@ -5,19 +5,18 @@ namespace TiendaNew
 {
     public class Tienda
     {
-        public List<Producto> ProductosListados { get; set; }
+        public List<IProducto> ProductosListados {get; private set;}
 
         public Tienda()
         {
-            ProductosListados = new List<Producto>();
+            ProductosListados = new List<IProducto>();
         }
-
-        public void AgregarProducto(Producto producto)
+        public void AgregarProducto(IProducto producto)
         {
             ProductosListados.Add(producto);
         }
 
-        public Producto BuscarProductos(string nombre)
+        public IProducto BuscarProductos(string nombre)
         {
             var product = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
             if (product == null)
@@ -30,7 +29,7 @@ namespace TiendaNew
 
         public bool EliminarProducto(string nombre)
         {
-            Producto productoAEliminar = ProductosListados.Find(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+            IProducto productoAEliminar = ProductosListados.Find(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
 
             if (productoAEliminar != null)
             {
@@ -40,8 +39,6 @@ namespace TiendaNew
             }else{
                 throw new ArgumentException("No se puede eliminar productos que no exiten");
             }
-
-            return false; // Indica que el producto no fue encontrado
         }
     }
 }
