@@ -43,7 +43,7 @@ namespace TiendaNew
         }
 
         public void AplicarDescuento(string nombre, float descuento)
-    {
+        {
             if (descuento < 0 || descuento > 100)
             {
             throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100", nameof(descuento));

@@ -128,6 +128,9 @@ public class TiendaTest
         mockProducto.Verify(p => p.ActualizarPrecio(800), Times.Once);
         // verifica que el metodo ActualizarPrecio fue llamado una vez (Times.Once) con el valor 800
 
+        //Assert.Equal(800, mockProducto.Object.Precio);
+        // deberia hacer un test en producto para verificar esto
+
     }
 
 
