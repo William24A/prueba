@@ -50,3 +50,25 @@ Identifique de las dos:
     2 - A continuación, implementas el código para que la prueba pase.
 
     3 - Una vez que las pruebas pasan, puedes mejorar el código si es necesario, asegurándote de que todas las pruebas sigan pasando. 
+
+
+
+3 -
+
+    - En lo que va del trabajo práctico, ¿puedes identificar 'Controladores' y 'Resguardos'?
+        La clase Tienda actua como un controlador porque se encarga de llamar a los metodos que
+        activan los test.
+        
+        El mock de la clase Producto es un resguardo porque simulan su comportamiento sin 
+        tener que crear uno.
+    
+    - ¿Qué es un mock? ¿Hay otros nombres para los objetos/funciones simulados?
+    Un mock es un objeto simulado que imita el comportamiento de objetos reales de una manera controlada. Se utiliza en pruebas unitarias para aislar el código que se está probando de sus dependencias.
+    
+    . Stub: Es un objeto simulado que devuelve valores predefinidos y no realiza ninguna lógica adicional. Normalmente se utiliza cuando no se necesita verificar las interacciones, sino solo proporcionar una implementación mínima.
+    
+    . Spy: Similar a un mock, pero a diferencia del mock, que se centra en verificar interacciones, un spy también puede registrar información sobre cómo se utilizó, permitiendo inspecciones posteriores.
+    
+    . Fake: Un fake es una implementación completa pero simplificada de una dependencia, que se usa principalmente en pruebas de integración cuando se requiere una versión funcional de un objeto, pero que no interactúe con sistemas externos reales.
+    
+    . Dummy: Es un objeto simulado que no se utiliza realmente, pero se pasa en un método porque es necesario tener un argumento de ese tipo.
