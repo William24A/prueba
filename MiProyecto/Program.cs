@@ -8,12 +8,12 @@ namespace MisPruebas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola");
-            Tienda tiendaRosa = new Tienda();
+            // Console.WriteLine("Hola");
+            // Tienda tiendaRosa = new Tienda();
 
-            //tiendaRosa.AgregarProducto("Res", 2400, "Carne");
-            IProducto produ = tiendaRosa.BuscarProductos("Res");
-            Console.WriteLine(produ.NombrarProducto());
+            // //tiendaRosa.AgregarProducto("Res", 2400, "Carne");
+            // IProducto produ = tiendaRosa.BuscarProductos("Res");
+            // Console.WriteLine(produ.NombrarProducto());
         }
     }
 }

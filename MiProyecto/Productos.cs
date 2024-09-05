@@ -5,9 +5,9 @@ namespace Productos
         string Nombre { get;}
         float Precio { get;}
         string Categoria { get;}
-        public string NombrarProducto();
-        public void Actualizar_Precio(float precio);
+        public void ActualizarPrecio(float nuevoPrecio);
     }
+    
     public class Producto: IProducto
     {
         public string Nombre{get; set;}
@@ -27,19 +27,14 @@ namespace Productos
             this.Categoria = categoria;
         }
 
-        public string NombrarProducto()
+        public void ActualizarPrecio(float nuevoPrecio)
         {
-            return "Nombre: "+ Nombre + " Precio: "+ Precio + " Categoria: "+ Categoria;
-        }
-
-        public void Actualizar_Precio(float precio)
-        {
-            if(precio < 0)
+            if(nuevoPrecio < 0)
             {
-                throw new ArgumentException("El precio nuevo es negativo");
+                throw new ArgumentException("El precio no puede ser negativo");
             }
 
-            this.Precio = precio;
+            this.Precio = nuevoPrecio;
         }
 
     }

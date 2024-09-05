@@ -27,7 +27,26 @@ dotnet test
 
 --- 
 
-1
-En la practica realizada solo se puede reconocer prubas unitarias, porque se realizaron sobre cada
-uno de los metodos de la clase. 
+1 - ¿Puedes identificar pruebas de unidad y de integración en la práctica que realizaste?
+Identifique de las dos:
+    Pruebas de Unidad
+        El constructor de producto, porque solo esta probando que la clase se inicializa
+        correctamente sin depender de otras clases.
 
+    Pruebas de integración
+        Las pruebas para para verificar el funcionamiento de la clase Tienda, como agregar, buscar o 
+        elimnar dependen de producto. En ese casos serian pruebas de integración.
+
+
+2 - Podría haber escrito las pruebas primero antes de modificar el código de la aplicación?
+    
+    Sí, sto es lo que se conoce como Desarrollo Guiado por Pruebas o TDD (Test-Driven Development). 
+    TDD es un enfoque de desarrollo en el que las pruebas se escriben antes de implementar la lógica del código.
+    
+    ¿Cómo sería el proceso de escribir primero los tests?
+    El ciclo de TDD sigue tres pasos:
+    1 - Escribes una prueba que verifique el comportamiento que deseas. Como el código aún no está          implementado, la prueba debería fallar.
+
+    2 - A continuación, implementas el código para que la prueba pase.
+
+    3 - Una vez que las pruebas pasan, puedes mejorar el código si es necesario, asegurándote de que todas las pruebas sigan pasando. 
