@@ -304,8 +304,16 @@ C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\p
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\obj\Debug\net7.0\teste.pdb
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\obj\Debug\net7.0\teste.genruntimeconfig.cache
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\obj\Debug\net7.0\ref\teste.dll
+<<<<<<< HEAD
 c:\Users\wil37\OneDrive\Escritorio\prueba\test\bin\Debug\net7.0\Castle.Core.dll
 c:\Users\wil37\OneDrive\Escritorio\prueba\test\bin\Debug\net7.0\Moq.dll
 c:\Users\wil37\OneDrive\Escritorio\prueba\test\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
 c:\Users\wil37\OneDrive\Escritorio\prueba\test\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 c:\Users\wil37\OneDrive\Escritorio\prueba\test\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+=======
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\bin\Debug\net7.0\Moq.dll
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+>>>>>>> d7e1b6277821dad164fbcc94007456ec0607b1cf

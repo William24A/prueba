@@ -30,7 +30,7 @@ public class TiendaTest
     [Fact]
     public void BuscarProductosTestTrue()
     {
-        // Given
+        // Arrange
         Tienda tiendaPrueba = new Tienda();
         string nombre = "Res";
         float precio = 1223;
@@ -38,9 +38,11 @@ public class TiendaTest
 
         Producto produ = new Producto(nombre, precio, categoria); 
         tiendaPrueba.AgregarProducto(produ);
-        // When
+
+        // Act
         var producto = tiendaPrueba.BuscarProductos(nombre);
-        // Then
+        
+        // Assert
         Assert.NotNull(producto);
         Assert.Equal(nombre,producto.Nombre);
         Assert.Equal(precio,producto.Precio);
@@ -64,52 +66,103 @@ public class TiendaTest
     [Fact]
     public void EliminarProductoTest()
     {
+        // Arrange
         Tienda tiendaPrueba = new Tienda();
         string nombre = "Res";
         float precio = 1223;
         string categoria = "carnes";
 
         Producto produ = new Producto(nombre, precio, categoria); 
-
         tiendaPrueba.AgregarProducto(produ);
 
-        var producto = tiendaPrueba.EliminarProducto(nombre);
+        // Act
+        bool seElimino = tiendaPrueba.EliminarProducto(nombre);
 
-        Assert.True(producto);
+        // Assert
+        Assert.True(seElimino);
     } 
 
     [Fact]
-    public void BuscarProductosExcepcionesTest()
+    public void BuscarProducto_ProductoInexistente_DeberiaLanzarExcepcion()
     {
-        // Given
+        // Arrange
         Tienda tiendaPrueba = new Tienda();
         string nombre = "Res";
-        // When
-        // Then
-        var exception = Assert.Throws<ArgumentException>(() => tiendaPrueba.BuscarProductos(nombre));
+
+        // Act - Assert
+        Assert.Throws<KeyNotFoundException>(() => tiendaPrueba.BuscarProductos(nombre));
     }
 
     [Fact]
-    public void EliminarProductoExcepcionesTest()
+    public void EliminarProducto_ProductoInexistente_DeberiaLanzarExcepcion()
     {
-        // Given
+        // Arrange
         Tienda tiendaPrueba = new Tienda();
         string nombre = "Res";
-        // When
-        // Then
-        var exception = Assert.Throws<ArgumentException>(() => tiendaPrueba.EliminarProducto(nombre));
+        
+        // Act - Assert
+        Assert.Throws<KeyNotFoundException>(() => tiendaPrueba.EliminarProducto(nombre));
     }
 
     [Fact]
-    public void Actualizar_PrecioExcepcionesTest()
+    public void AplicarDescuento_DeberiaActualizarPrecioCorrectamente()
     {
-        // Given
-        Producto productoPrueba = new Producto();
-        float num = -1234;
-        // When
-        // Then
-        var exception = Assert.Throws<ArgumentException>(() => productoPrueba.Actualizar_Precio(num));
+        // Arrange
+        string nombre = "Res";
+        float precio = 1000;
+        string categoria = "carnes";
+        
+        var mockProducto = new Mock<IProducto>();
+        mockProducto.Setup(p => p.Nombre).Returns(nombre);
+        mockProducto.Setup(p => p.Precio).Returns(precio);
+        mockProducto.Setup(p => p.Categoria).Returns(categoria);
+
+
+        Tienda tienda = new Tienda();
+        tienda.AgregarProducto(mockProducto.Object);
+
+        // Act
+        tienda.AplicarDescuento(nombre, 20); // descuento del 20% -> me tendria que dar 800
+
+        // Assert
+        mockProducto.Verify(p => p.ActualizarPrecio(800), Times.Once);
+        // verifica que el metodo ActualizarPrecio fue llamado una vez (Times.Once) con el valor 800
+
+        //Assert.Equal(800, mockProducto.Object.Precio);
+        // deberia hacer un test en producto para verificar esto
+
     }
+
+
+//     [Fact]
+// public void AplicarDescuento_DeberiaActualizarPrecioCorrectamente()
+// {
+//     // Arrange
+//     var tienda = new Tienda();
+
+
+//     string nombre = "Res";
+//     float precio = 1000;
+//     string categoria = "carnes";
+    
+//     var mockProducto = new Mock<IProducto>();
+//     mockProducto.Setup(p => p.Nombre).Returns(nombre);
+//     mockProducto.Setup(p => p.Precio).Returns(precio);
+//     mockProducto.Setup(p => p.Categoria).Returns(categoria);
+    
+//     // Setup para aceptar cualquier valor en ActualizarPrecio
+//     mockProducto.Setup(p => p.ActualizarPrecio(It.IsAny<float>())).Verifiable();
+    
+//     tienda.AgregarProducto(mockProducto.Object);
+
+//     // Act
+//     tienda.AplicarDescuento(nombre, 20);
+
+//     // Assert
+//     mockProducto.Verify(p => p.ActualizarPrecio(800), Times.Once);
+// }
+
+
 
     
 }
