@@ -1,8 +1,30 @@
+using System;
 using System.Collections.Generic;
 using Productos;
 
 namespace TiendaNew
 {
+    public interface IDisposable
+    {
+        void Dispo();
+    }
+    public class TiendaFixture: IDisposable
+    {
+        public Tienda TiendaNew {get; private set;}
+        public TiendaFixture()
+        {
+            this.TiendaNew = new Tienda();
+            TiendaNew.ProductosListados.Add(new Producto("Lomo", 1234, "Carne"));
+            TiendaNew.ProductosListados.Add(new Producto("Leche", 1234, "Lacteos"));
+            TiendaNew.ProductosListados.Add(new Producto("Manteca",1234, "Lacteos"));
+            TiendaNew.ProductosListados.Add(new Producto("Leche en polvo", 1234, "Lacteos"));
+            TiendaNew.ProductosListados.Add(new Producto("Jamon", 1234, "Embutidos"));
+        }
+        public void Dispo()
+        {
+            this.TiendaNew.ProductosListados.Clear();
+        }
+    }
     public class Tienda
     {
         public List<IProducto> ProductosListados {get; private set;}
@@ -27,7 +49,7 @@ namespace TiendaNew
             return producto;
     
         }
-
+        
         public bool EliminarProducto(string nombre)
         {
             IProducto productoAEliminar = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));

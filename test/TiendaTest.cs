@@ -3,24 +3,26 @@ using TiendaNew;
 using Productos;
 using Moq;
 
-public class TiendaTest
+public class TiendaTest: IClassFixture<TiendaFixture>
 {
+    private readonly TiendaFixture _fixture;
+    public TiendaTest(TiendaFixture fixture)
+    {
+        _fixture = fixture;
+    }
+
     [Fact]
     public void AgregarProductoTest()
     {
-        // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
-        float precio = 1223;
-        string categoria = "carnes";
-        
-        Producto produ = new Producto(nombre, precio, categoria); 
-
         // Act
-        tiendaPrueba.AgregarProducto(produ);
+        var nombre = "Res";
+        var precio = 1223;
+        var categoria = "Carne";
+        var produc = new Producto(nombre, precio, categoria);
+        _fixture.TiendaNew.AgregarProducto(produc);
 
         // Assert
-        var producto = tiendaPrueba.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+        var producto = _fixture.TiendaNew.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
         Assert.NotNull(producto);
         Assert.Equal(nombre,producto.Nombre); 
         Assert.Equal(precio,producto.Precio);
@@ -31,16 +33,14 @@ public class TiendaTest
     public void BuscarProductosTestTrue()
     {
         // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
-        float precio = 1223;
-        string categoria = "carnes";
-
-        Producto produ = new Producto(nombre, precio, categoria); 
-        tiendaPrueba.AgregarProducto(produ);
+        string nombre = "Queso";
+        float precio = 2000;
+        string categoria = "Lacteo";
+        var produ = new Producto(nombre, precio, categoria); 
+        _fixture.TiendaNew.AgregarProducto(produ);
 
         // Act
-        var producto = tiendaPrueba.BuscarProductos(nombre);
+        var producto = _fixture.TiendaNew.BuscarProductos(nombre);
         
         // Assert
         Assert.NotNull(producto);
@@ -130,7 +130,7 @@ public class TiendaTest
 
         //Assert.Equal(800, mockProducto.Object.Precio);
         // deberia hacer un test en producto para verificar esto
-
+        _fixture.Dispo();
     }
 
 
