@@ -136,11 +136,12 @@ public class TiendaTest: IClassFixture<ProductoFixture>
         Tienda tiendaNew = new Tienda();
         List<string> carrito = new List<string> { "Lomo", "Leche", "Manteca"};
         tiendaNew.AgregarProducto(_fixture.ProductosListados);
+        tiendaNew.AplicarDescuento("Lomo", 20);
 
 
         var total = tiendaNew.Calcular_total_carrito(carrito);
         Assert.NotNull(total);
-        Assert.Equal(total, 3702);
+        Assert.Equal(total, 3455.199951171875);
     }
 
 //     [Fact]
