@@ -72,3 +72,15 @@ Identifique de las dos:
     . Fake: Un fake es una implementación completa pero simplificada de una dependencia, que se usa principalmente en pruebas de integración cuando se requiere una versión funcional de un objeto, pero que no interactúe con sistemas externos reales.
     
     . Dummy: Es un objeto simulado que no se utiliza realmente, pero se pasa en un método porque es necesario tener un argumento de ese tipo.
+4 -
+    - ¿Qué ventajas ve en el uso de fixtures? ¿Qué enfoque estaría aplicando?
+
+        La mayor ventaja de usar fixture es la reutilización de código, esto porque no debo inicializar todo el tiempo mi contenido de la fixture sino inicializo al principio y se utiliza en todas las pruebas. Esto se nota mas cuando se utiliza para inicializar objetos complejos. Otro veneficio seria el ordenamiento del código, al no tener que inicializar todo el tiempo los objetos, se realiza un código mas simple y mas claro.
+
+        El enfoque que estaría aplicando seria uno modular y eficiente en pruebas automáticas, esto se debe a que en lugar de tener pruebas independiente que inicialicen los objetos y luego los destruyan para iniciar otros, tenemos un conjunto de objetos para utilizar durante todos los test.
+    
+    - Explique los conceptos de Setup y Teardown en testing.
+    
+        Conceptos de Setup y Teardown en Testing
+        1- Setup: seria la preparación previa a utilizar los test, su objetico es configurar el entorno para las pruebas, en este caso seria la creación de los objetos antes de utilizarlos.
+        2- Teardown: seria la limpieza del entorno después de realizar las pruebas, en este caso a través de la interfaz IDisposable con el método Dispose, eliminan el contenido de la fila de productos. 

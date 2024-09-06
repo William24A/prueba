@@ -21,7 +21,7 @@ public class TiendaTest: IClassFixture<ProductoFixture>
         // Act
         Tienda tiendaNew = new Tienda();
         var product = _fixture.ProductosListados[0];
-        tiendaNew.AgregarProducto(_fixture.ProductosListados);
+        tiendaNew.AgregarProducto(product);
 
         // Assert
         var producto = tiendaNew.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(product.Nombre, StringComparison.OrdinalIgnoreCase));
