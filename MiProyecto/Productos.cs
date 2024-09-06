@@ -7,6 +7,29 @@ namespace Productos
         string Categoria { get;}
         public void ActualizarPrecio(float nuevoPrecio);
     }
+
+    public interface IDisposable
+    {
+        void Dispo();
+    }
+    public class ProductoFixture: IDisposable
+    {
+        public List<Producto> ProductosListados { get; private set;}
+        public ProductoFixture()
+        {
+            ProductosListados = new List<Producto>();
+            
+            ProductosListados.Add(new Producto("Lomo", 1234, "Carne"));
+            ProductosListados.Add(new Producto("Leche", 1234, "Lacteos"));
+            ProductosListados.Add(new Producto("Manteca",1234, "Lacteos"));
+            ProductosListados.Add(new Producto("Leche en polvo", 1234, "Lacteos"));
+            ProductosListados.Add(new Producto("Jamon", 1234, "Embutidos"));
+        }
+        public void Dispo()
+        {
+            this.ProductosListados.Clear();
+        }
+    }
     
     public class Producto: IProducto
     {

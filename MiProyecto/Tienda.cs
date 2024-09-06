@@ -4,42 +4,25 @@ using Productos;
 
 namespace TiendaNew
 {
-    public interface IDisposable
-    {
-        void Dispo();
-    }
-    public class TiendaFixture: IDisposable
-    {
-        public Tienda TiendaNew {get; private set;}
-        public TiendaFixture()
-        {
-            this.TiendaNew = new Tienda();
-            TiendaNew.ProductosListados.Add(new Producto("Lomo", 1234, "Carne"));
-            TiendaNew.ProductosListados.Add(new Producto("Leche", 1234, "Lacteos"));
-            TiendaNew.ProductosListados.Add(new Producto("Manteca",1234, "Lacteos"));
-            TiendaNew.ProductosListados.Add(new Producto("Leche en polvo", 1234, "Lacteos"));
-            TiendaNew.ProductosListados.Add(new Producto("Jamon", 1234, "Embutidos"));
-        }
-        public void Dispo()
-        {
-            this.TiendaNew.ProductosListados.Clear();
-        }
-    }
     public class Tienda
     {
-        public List<IProducto> ProductosListados {get; private set;}
+        public List<Producto> ProductosListados {get; private set;}
 
         public Tienda()
         {
-            ProductosListados = new List<IProducto>();
+            ProductosListados = new List<Producto>();
         }
 
-        public void AgregarProducto(IProducto producto)
+        public void AgregarProducto(Producto producto)
         {
             ProductosListados.Add(producto);
         }
+        public void AgregarProducto(List<Producto> productos)
+        {
+            this.ProductosListados = productos;
+        }
 
-        public IProducto BuscarProductos(string nombre)
+        public Producto BuscarProductos(string nombre)
         {
             var producto = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
             if (producto == null)
@@ -52,7 +35,7 @@ namespace TiendaNew
         
         public bool EliminarProducto(string nombre)
         {
-            IProducto productoAEliminar = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+            var productoAEliminar = ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
 
             if (productoAEliminar != null)
             {
@@ -71,9 +54,28 @@ namespace TiendaNew
             throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100", nameof(descuento));
             }
 
-            IProducto producto = BuscarProductos(nombre);
+            Producto producto = BuscarProductos(nombre);
             float nuevoPrecio = producto.Precio * (1 - (descuento / 100));
             producto.ActualizarPrecio(nuevoPrecio);
+        }
+
+        public float Calcular_total_carrito(List<string> carrito)
+        {
+            float total = 0;
+            if(carrito == null)
+            {
+                return 0;
+            }else{
+                foreach (var Nombre in carrito)
+                {
+                    var product = BuscarProductos(Nombre);
+                    if(product != null)
+                    {
+                        total += product.Precio;
+                    }
+                }
+                return total;
+            }
         }
     }
 }
