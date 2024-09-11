@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dpvE1/hkjZ4d1LzCQsgJrzzgdi4UvRF7dmSSpYMT+V86PZ92RP6A8qc0D5ROBOKk5NX0/WgXRjMPCD5GeNvYcA==",
+  "dgSpecHash": "FshIluW5luA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Alvaro\\Cosas\\ESCUELA\\2024\\2° Cuatrimestre\\Ingenieria de Software\\tp1\\prueba\\test\\teste.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,10 @@
     "C:\\Users\\Alvaro\\.nuget\\packages\\xunit.core\\2.9.0\\xunit.core.2.9.0.nupkg.sha512",
     "C:\\Users\\Alvaro\\.nuget\\packages\\xunit.extensibility.core\\2.9.0\\xunit.extensibility.core.2.9.0.nupkg.sha512",
     "C:\\Users\\Alvaro\\.nuget\\packages\\xunit.extensibility.execution\\2.9.0\\xunit.extensibility.execution.2.9.0.nupkg.sha512",
-    "C:\\Users\\Alvaro\\.nuget\\packages\\xunit.runner.visualstudio\\3.0.0-pre.30\\xunit.runner.visualstudio.3.0.0-pre.30.nupkg.sha512"
+    "C:\\Users\\Alvaro\\.nuget\\packages\\xunit.runner.visualstudio\\3.0.0-pre.30\\xunit.runner.visualstudio.3.0.0-pre.30.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

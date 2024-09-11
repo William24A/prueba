@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = teste
 build_property.ProjectDir = C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\test\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

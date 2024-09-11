@@ -27,6 +27,7 @@ namespace Productos
             this.Categoria = categoria;
         }
 
+
         public void ActualizarPrecio(float nuevoPrecio)
         {
             if(nuevoPrecio < 0)
