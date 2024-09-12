@@ -18,7 +18,6 @@ C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\p
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.runtimeconfig.json
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.dll
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\bin\Debug\net7.0\MiProyecto.pdb
-C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.csproj.AssemblyReference.cache
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.AssemblyInfoInputs.cache
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.AssemblyInfo.cs
@@ -28,3 +27,4 @@ C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\p
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.pdb
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.genruntimeconfig.cache
 C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\ref\MiProyecto.dll
+C:\Users\Alvaro\Cosas\ESCUELA\2024\2° Cuatrimestre\Ingenieria de Software\tp1\prueba\MiProyecto\obj\Debug\net7.0\MiProyecto.sourcelink.json

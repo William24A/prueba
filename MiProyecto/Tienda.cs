@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Productos;
 
-namespace TiendaNew
+namespace Tiendas
 {
     public class Tienda
     {

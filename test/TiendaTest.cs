@@ -1,107 +1,85 @@
 using Xunit;
-using TiendaNew;
+using Tiendas;
 using Productos;
 using Moq;
 
-public class TiendaTest
+public class TiendaTest : IClassFixture<TiendaFixture>
 {
+    private readonly TiendaFixture _fixture;
+
+    public TiendaTest(TiendaFixture fixture)
+    {
+        _fixture = fixture;
+    }
+    
     [Fact]
-    public void AgregarProductoTest()
+    public void AgregarProducto_DebeAgregarProductoAlInventario()
     {
         // Arrange
-        Tienda tiendaPrueba = new Tienda();
         string nombre = "Res";
         float precio = 1223;
         string categoria = "carnes";
         
-        Producto produ = new Producto(nombre, precio, categoria); 
+        Producto producto = new Producto(nombre, precio, categoria); 
 
         // Act
-        tiendaPrueba.AgregarProducto(produ);
+        _fixture.Tienda.AgregarProducto(producto);
 
         // Assert
-        var producto = tiendaPrueba.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
-        Assert.NotNull(producto);
-        Assert.Equal(nombre,producto.Nombre); 
-        Assert.Equal(precio,producto.Precio);
-        Assert.Equal(categoria,producto.Categoria);
+        var productoEncontrado = _fixture.Tienda.ProductosListados.FirstOrDefault(p => p.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+        Assert.NotNull(productoEncontrado);
+        Assert.Equal(nombre,productoEncontrado.Nombre); 
+        Assert.Equal(precio,productoEncontrado.Precio);
+        Assert.Equal(categoria,productoEncontrado.Categoria);
     }
 
     [Fact]
-    public void BuscarProductosTestTrue()
+    public void BuscarProducto_ProductoExistente_DeberiaRetornarProducto()
     {
         // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
-        float precio = 1223;
-        string categoria = "carnes";
-
-        Producto produ = new Producto(nombre, precio, categoria); 
-        tiendaPrueba.AgregarProducto(produ);
+        string nombre = "Libro"; // es uno de los producto que hay en el Fixture
 
         // Act
-        var producto = tiendaPrueba.BuscarProductos(nombre);
+        var productoEncontrado = _fixture.Tienda.BuscarProductos(nombre);
         
         // Assert
-        Assert.NotNull(producto);
-        Assert.Equal(nombre,producto.Nombre);
-        Assert.Equal(precio,producto.Precio);
-        Assert.Equal(categoria,producto.Categoria);
+        Assert.NotNull(productoEncontrado);
+        Assert.Equal(nombre,productoEncontrado.Nombre);
     }
-/*
-    [Fact]
-    public void BuscarProductosTestFalse()
-    {
-        // Given
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
-
-        // When
-        var producto = tiendaPrueba.BuscarProductos(nombre);
-
-        // Then
-        Assert.Null(producto);
-    }*/
-
-    [Fact]
-    public void EliminarProductoTest()
-    {
-        // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
-        float precio = 1223;
-        string categoria = "carnes";
-
-        Producto produ = new Producto(nombre, precio, categoria); 
-        tiendaPrueba.AgregarProducto(produ);
-
-        // Act
-        bool seElimino = tiendaPrueba.EliminarProducto(nombre);
-
-        // Assert
-        Assert.True(seElimino);
-    } 
 
     [Fact]
     public void BuscarProducto_ProductoInexistente_DeberiaLanzarExcepcion()
     {
         // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
+        string nombre = "aslkdfkhasof";
 
         // Act - Assert
-        Assert.Throws<KeyNotFoundException>(() => tiendaPrueba.BuscarProductos(nombre));
+        Assert.Throws<KeyNotFoundException>(() => _fixture.Tienda.BuscarProductos(nombre));
     }
 
+
+    [Fact]
+    public void EliminarProducto_ProductoExistente_DeberiaEliminarlo()
+    {
+        // Arrange
+        string nombre = "Laptop"; // cambia el esto del fixture
+
+        // Act
+        bool seElimino = _fixture.Tienda.EliminarProducto(nombre);
+
+        // Assert
+        Assert.True(seElimino);
+    } 
+
+    
     [Fact]
     public void EliminarProducto_ProductoInexistente_DeberiaLanzarExcepcion()
     {
         // Arrange
-        Tienda tiendaPrueba = new Tienda();
-        string nombre = "Res";
+        string nombre = "Resasdfhas";
         
         // Act - Assert
-        Assert.Throws<KeyNotFoundException>(() => tiendaPrueba.EliminarProducto(nombre));
+        Assert.Throws<KeyNotFoundException>(() => _fixture.Tienda.EliminarProducto(nombre));
     }
 
     [Fact]
@@ -132,37 +110,6 @@ public class TiendaTest
         // deberia hacer un test en producto para verificar esto
 
     }
-
-
-//     [Fact]
-// public void AplicarDescuento_DeberiaActualizarPrecioCorrectamente()
-// {
-//     // Arrange
-//     var tienda = new Tienda();
-
-
-//     string nombre = "Res";
-//     float precio = 1000;
-//     string categoria = "carnes";
-    
-//     var mockProducto = new Mock<IProducto>();
-//     mockProducto.Setup(p => p.Nombre).Returns(nombre);
-//     mockProducto.Setup(p => p.Precio).Returns(precio);
-//     mockProducto.Setup(p => p.Categoria).Returns(categoria);
-    
-//     // Setup para aceptar cualquier valor en ActualizarPrecio
-//     mockProducto.Setup(p => p.ActualizarPrecio(It.IsAny<float>())).Verifiable();
-    
-//     tienda.AgregarProducto(mockProducto.Object);
-
-//     // Act
-//     tienda.AplicarDescuento(nombre, 20);
-
-//     // Assert
-//     mockProducto.Verify(p => p.ActualizarPrecio(800), Times.Once);
-// }
-
-
 
     
 }

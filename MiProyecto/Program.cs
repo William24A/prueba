@@ -1,5 +1,5 @@
 ﻿using System;
-using TiendaNew;
+using Tiendas;
 using Productos;
 
 namespace MisPruebas
@@ -8,7 +8,7 @@ namespace MisPruebas
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Hola");
+            Console.WriteLine("Hola");
             // Tienda tiendaRosa = new Tienda();
 
             // //tiendaRosa.AgregarProducto("Res", 2400, "Carne");

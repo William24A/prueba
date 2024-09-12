@@ -72,3 +72,32 @@ Identifique de las dos:
     . Fake: Un fake es una implementación completa pero simplificada de una dependencia, que se usa principalmente en pruebas de integración cuando se requiere una versión funcional de un objeto, pero que no interactúe con sistemas externos reales.
     
     . Dummy: Es un objeto simulado que no se utiliza realmente, pero se pasa en un método porque es necesario tener un argumento de ese tipo.
+
+
+
+4-
+    #¿Qué ventajas ve en el uso de fixtures? ¿Qué enfoque(caja negra/blanca) estaría aplicando?
+    
+    Es de caja negra porque los datos que inicializo en el fixture son solo entradas para las pruebas y no te me importa el comportamiento interno de los objetos o métodos.
+
+    #Ventajas:
+    - Reutilización de código: Permite configurar un estado inicial común para todas las pruebas, evitando la repetición de código de configuración.
+    - Consistencia: Asegura que todas las pruebas se ejecuten con el mismo conjunto de datos iniciales, lo que puede hacer que las pruebas sean más confiables y consistentes.
+    - Facilita el mantenimiento: Si se necesita cambiar los datos de prueba o la configuración inicial, solo se modifica en un lugar, lo que reduce errores y facilita el mantenimiento.
+    - Eficiencia: Puede mejorar el rendimiento de las pruebas al configurar el estado una vez para múltiples pruebas, en lugar de hacerlo para cada prueba individual.
+    
+
+
+    #Explique los conceptos de Setup y Teardown en testing:
+
+    - Setup (Configuración):
+    . Es el proceso de preparar el entorno para las pruebas.
+    . Se ejecuta antes de cada prueba o conjunto de pruebas.
+    . Incluye tareas como inicializar objetos, preparar datos de prueba, o configurar conexiones.
+    . En nuestro caso, el constructor de TiendaFixture actúa como setup.
+    
+    - Teardown (Limpieza):
+    . Es el proceso de limpiar después de que las pruebas se han ejecutado.
+    . Se ejecuta después de cada prueba o conjunto de pruebas.
+    . Incluye tareas como liberar recursos, limpiar datos temporales, o cerrar conexiones.
+    . En nuestro caso, el método Dispose de TiendaFixture podría actuar como teardown si fuera necesario.     

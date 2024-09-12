@@ -1,4 +1,4 @@
-namespace Productos 
+namespace Productos
 {
     public interface IProducto
     {
