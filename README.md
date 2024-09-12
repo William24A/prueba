@@ -100,4 +100,18 @@ Identifique de las dos:
     . Es el proceso de limpiar después de que las pruebas se han ejecutado.
     . Se ejecuta después de cada prueba o conjunto de pruebas.
     . Incluye tareas como liberar recursos, limpiar datos temporales, o cerrar conexiones.
-    . En nuestro caso, el método Dispose de TiendaFixture podría actuar como teardown si fuera necesario.     
+    . En nuestro caso, el método Dispose de TiendaFixture podría actuar como teardown si fuera necesario.
+
+
+5 - ¿Puede describir una situación de desarrollo para este caso en donde se plantee pruebas de
+    integración ascendente? Describa la situación.
+
+    Supongamos que estás desarrollando un sistema de carrito de compras para una tienda en línea:
+
+    Primer paso: Comienzas desarrollando los componentes más pequeños e independientes, como la clase Producto que contiene el nombre, precio y categoría de un producto, y pruebas las funciones que modifican el precio del producto (por ejemplo, aplicar un descuento).
+
+    Segundo paso: Luego desarrollas la clase Tienda, que es responsable de gestionar un inventario de productos, agregar nuevos productos y buscar productos por su nombre. En esta etapa, realizas pruebas de unidad para asegurarte de que estas funciones trabajen correctamente de forma independiente.
+
+    Tercer paso (prueba de integración ascendente): Después de verificar que cada componente individual funciona, integras las funciones. Por ejemplo, integras la clase Tienda con la clase Producto para verificar que las operaciones como agregar productos al carrito, aplicar descuentos y calcular el total del carrito funcionan correctamente juntas.
+
+    Pruebas de integración ascendente: En este caso, las pruebas de integración ascendente se centrarían en verificar que el carrito de compras puede sumar correctamente los precios de los productos, que los descuentos se aplican bien y que todo el sistema funciona de manera integrada.

@@ -18,7 +18,8 @@ public class TiendaFixture : IDisposable // Liberar espacio
             new Producto("Laptop", 1000, "Electrónicos"),
             new Producto("Smartphone", 500, "Electrónicos"),
             new Producto("Libro", 20, "Libros"),
-            new Producto("Camiseta", 25, "Ropa")
+            new Producto("Camiseta", 25, "Ropa"),
+            new Producto("Campera", 100, "Ropa")
         };
 
         foreach (var producto in ProductosEjemplo)
@@ -29,6 +30,5 @@ public class TiendaFixture : IDisposable // Liberar espacio
 
     public void Dispose()
     {
-        tienda = null;
     }
 }

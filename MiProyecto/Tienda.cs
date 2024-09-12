@@ -53,5 +53,16 @@ namespace Tiendas
             float nuevoPrecio = producto.Precio * (1 - (descuento / 100));
             producto.ActualizarPrecio(nuevoPrecio);
         }
+
+         public float CalcularTotalCarrito(List<string> nombresProductos)
+        {
+            float total = 0;
+            foreach (var nombre in nombresProductos)
+            {
+                var producto = BuscarProductos(nombre);
+                total += producto.Precio;
+            }
+            return total;
+        }
     }
 }

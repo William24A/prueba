@@ -62,7 +62,7 @@ public class TiendaTest : IClassFixture<TiendaFixture>
     public void EliminarProducto_ProductoExistente_DeberiaEliminarlo()
     {
         // Arrange
-        string nombre = "Laptop"; // cambia el esto del fixture
+        string nombre = "Campera"; // cambia el esto del fixture
 
         // Act
         bool seElimino = _fixture.Tienda.EliminarProducto(nombre);
@@ -109,6 +109,35 @@ public class TiendaTest : IClassFixture<TiendaFixture>
         //Assert.Equal(800, mockProducto.Object.Precio);
         // deberia hacer un test en producto para verificar esto
 
+    }
+
+
+    [Fact]
+    public void CalcularTotalCarrito_DeberiaRetornarElPrecioTotal_SinDescuento()
+    {
+        // Arrange
+        var nombresProductos = new List<string> { "Laptop", "Smartphone" };
+
+        // Act
+        var total = _fixture.Tienda.CalcularTotalCarrito(nombresProductos);
+
+        // Assert
+        Assert.Equal(1500, total);  // 1000 + 500  = 1500
+    }
+
+    [Fact]
+    public void CalcularTotalCarrito_DeberiaRetornarElPrecioTotal_ConDescuento()
+    {
+        // Arrange
+        var nombresProductos = new List<string> { "Laptop", "Smartphone", "Campera" };
+
+        _fixture.Tienda.AplicarDescuento("Campera", 10);  //  100 - 10% = 90
+
+        // Act
+        var total = _fixture.Tienda.CalcularTotalCarrito(nombresProductos);
+
+        // Assert
+        Assert.Equal(1590, total);  // 1000 (Laptop) + 500 (Smartphone) + 90 = 1590
     }
 
     
